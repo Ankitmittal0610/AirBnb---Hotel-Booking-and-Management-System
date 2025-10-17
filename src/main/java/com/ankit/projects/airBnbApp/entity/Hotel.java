@@ -8,6 +8,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
@@ -42,6 +43,13 @@ public class Hotel {
 
     @Column(nullable = false)
     private Boolean active;
+
+    // one user can be owner of multiple hotels
+    @ManyToOne
+    private User owner;
+
+    @OneToMany(mappedBy = "hotel")
+    public List<Room> rooms;
 
 }
 
