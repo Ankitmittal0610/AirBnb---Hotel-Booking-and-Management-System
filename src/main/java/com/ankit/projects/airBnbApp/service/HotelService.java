@@ -1,6 +1,7 @@
 package com.ankit.projects.airBnbApp.service;
 
 import com.ankit.projects.airBnbApp.dto.HotelDto;
+import com.ankit.projects.airBnbApp.dto.HotelInfoDto;
 
 public interface HotelService {
 
@@ -14,4 +15,5 @@ public interface HotelService {
 
     void activateHotel(Long hotelId);
 
+    HotelInfoDto getHotelInfoById(Long hotelId);
 }
