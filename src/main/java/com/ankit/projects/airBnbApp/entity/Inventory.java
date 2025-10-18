@@ -50,7 +50,7 @@ public class Inventory {
     private BigDecimal surgeFactor;
 
     @Column(nullable = false, precision = 10, scale = 2)
-    private BigDecimal price;   // basePrice(in room entity)  * surgeFactor
+    private BigDecimal price;   // basePrice(in room entity)  * surgeFactor ==> means price of inventory on that particular day
 
     @Column(nullable = false)
     private String city; // While searching hotels we dont have to use JOIN Query from hotels and rooms bcoz city is not changed frequently in hotel

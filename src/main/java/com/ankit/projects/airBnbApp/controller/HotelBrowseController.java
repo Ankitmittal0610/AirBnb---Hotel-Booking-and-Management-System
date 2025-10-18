@@ -2,6 +2,7 @@ package com.ankit.projects.airBnbApp.controller;
 
 import com.ankit.projects.airBnbApp.dto.HotelDto;
 import com.ankit.projects.airBnbApp.dto.HotelInfoDto;
+import com.ankit.projects.airBnbApp.dto.HotelPriceDto;
 import com.ankit.projects.airBnbApp.dto.HotelSearchRequest;
 import com.ankit.projects.airBnbApp.service.HotelService;
 import com.ankit.projects.airBnbApp.service.InventoryService;
@@ -19,9 +20,9 @@ public class HotelBrowseController {
     private final HotelService hotelService;
 
     @GetMapping("/search")
-    public ResponseEntity<Page<HotelDto>> searchHotels(@RequestBody HotelSearchRequest hotelSearchRequest) {
+    public ResponseEntity<Page<HotelPriceDto>> searchHotels(@RequestBody HotelSearchRequest hotelSearchRequest) {
 
-        Page<HotelDto> page = inventoryService.searchHotels(hotelSearchRequest);
+        var page = inventoryService.searchHotels(hotelSearchRequest);
         return ResponseEntity.ok(page);
     }
 
