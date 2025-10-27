@@ -46,7 +46,7 @@ public class Hotel {
     private Boolean active;
 
     // one user can be owner of multiple hotels
-    @ManyToOne(optional = false,fetch = FetchType.LAZY)
+    @ManyToOne(optional = false)
     private User owner;
 
     @OneToMany(mappedBy = "hotel")
