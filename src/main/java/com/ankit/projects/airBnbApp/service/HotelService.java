@@ -2,6 +2,7 @@ package com.ankit.projects.airBnbApp.service;
 
 import com.ankit.projects.airBnbApp.dto.HotelDto;
 import com.ankit.projects.airBnbApp.dto.HotelInfoDto;
+import com.ankit.projects.airBnbApp.dto.HotelInfoRequestDto;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ public interface HotelService {
 
     void activateHotel(Long hotelId);
 
-    HotelInfoDto getHotelInfoById(Long hotelId);
+    HotelInfoDto getHotelInfoById(Long hotelId, HotelInfoRequestDto hotelInfoRequestDto);
 
     List<HotelDto> getAllHotels();
 }
